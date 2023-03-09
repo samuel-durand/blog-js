@@ -14,7 +14,15 @@
     <main>
         <div>
 
-            <div id="onglet"></div>
+            <div id="menu">
+                <ul id="onglets">
+
+                    <li class="active"> Format texte </li>
+                    <li> Insertion image </li>
+                    <li> Format image </li>
+
+                </ul>
+            </div>
 
             <div id="outils">
 
