@@ -1,0 +1,15 @@
+#onglets {
+    display: flex;
+    border: 1px solid black;
+    margin-top: 1%;
+    padding: 1%;
+}
+
+#onglets li {
+    display: flex;
+    /* width: 100%; */
+    border: 1px black solid;
+    border-radius: 5px 5px 1px 1px;
+    align-items: end;
+    padding: 1%;
+}
