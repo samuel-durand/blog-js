@@ -15,7 +15,7 @@
         <div>
 
             <div id="menu">
-                <ul id="onglets">
+                <ul id="tabs">
 
                     <li class="active"> Format texte </li>
                     <li> Insertion image </li>
@@ -24,7 +24,7 @@
                 </ul>
             </div>
 
-            <div id="outils">
+            <div id="tools">
 
             </div>
 
