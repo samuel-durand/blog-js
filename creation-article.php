@@ -36,14 +36,14 @@
                     <img src="" alt="end">
                 </div>
 
-                <div id="insert-image">
+                <!-- <div id="insert-image">
                     <img src="" alt="insert-image">
                 </div>
 
                 <div id="tools-image">
                     <img src="" alt="width">
                     <img src="" alt="height">
-                </div>
+                </div> -->
             </div>
 
         </div>
