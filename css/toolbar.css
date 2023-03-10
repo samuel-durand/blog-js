@@ -1,15 +1,21 @@
 #onglets {
-    display: flex;
-    border: 1px solid black;
+    border-bottom: 1px solid black;
     margin-top: 1%;
-    padding: 1%;
+    padding: 26px;
+    list-style-type: none;
 }
 
 #onglets li {
-    display: flex;
-    /* width: 100%; */
+    float: left;
     border: 1px black solid;
-    border-radius: 5px 5px 1px 1px;
-    align-items: end;
-    padding: 1%;
+    border-radius: 4px 4px 1px 1px;
+    padding: 2px;
+    margin: 2px;
+    height: 19px;
+}
+
+#onglets li.active
+{
+    border-bottom: 1px solid #fff;
+    background-color: #fff;
 }
