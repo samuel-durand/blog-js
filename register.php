@@ -2,8 +2,14 @@
 
 include('./connect.php');
 
+
+
 // Connexion à la base de données
 $db = new PDO("mysql:host=localhost;dbname=blog_js", "root", "");
+
+// Ajout de la colonne "register_date" à la table "users"
+$stmt = $db->prepare("ALTER TABLE users ADD register_date DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP");
+$stmt->execute();
 
 // Récupération du dernier id_role
 $stmt = $db->query("SELECT id_role FROM users ORDER BY id DESC LIMIT 1");
@@ -15,8 +21,8 @@ $new_id_role = $last_id_role + 1;
 // Hashage du mot de passe
 $hashed_password = password_hash($_POST["password"], PASSWORD_DEFAULT);
 
-// Insertion du nouvel enregistrement avec le nouveau id_role
-$stmt = $db->prepare("INSERT INTO users (email, login, password, id_role) VALUES (:email, :login, :password, :id_role)");
+// Insertion du nouvel enregistrement avec le nouveau id_role et l'heure d'inscription
+$stmt = $db->prepare("INSERT INTO users (email, login, password, id_role, register_date) VALUES (:email, :login, :password, :id_role, NOW())");
 $stmt->execute(array(
     "email" => $_POST["email"],
     "login" => $_POST["login"],
@@ -25,6 +31,7 @@ $stmt->execute(array(
 ));
 
 echo "Enregistrement ajouté avec succès.";
+
 
 
 
@@ -40,7 +47,7 @@ echo "Enregistrement ajouté avec succès.";
     <title>Inscription</title>
 </head>
 <body>
-<form method="post" >
+<form id="inscription-form">
     <label for="email">Email:</label>
     <input type="email" name="email" required>
     
@@ -53,10 +60,26 @@ echo "Enregistrement ajouté avec succès.";
     <button type="submit">Ajouter utilisateur</button>
 </form>
 
-
-    </div>
-
-
+<script>
+    const form = document.getElementById('inscription-form');
+    
+    form.addEventListener('submit', function(event) {
+        event.preventDefault();
+        
+        const formData = new FormData(form);
+        
+        fetch('register.php', {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => {
+            if (response.ok) {
+                window.location.href = 'login.php';
+            }
+        })
+        .catch(error => console.error(error));
+    });
+</script>
 
 </body>
 </html>
