@@ -12,7 +12,7 @@
 <body>
 
     <main>
-        <div>
+        <div id="article">
 
             <div id="menu">
                 <ul id="tabs">
@@ -26,14 +26,12 @@
 
             <div id="tools">
                 <div id="tools-text">
-                    <img src="" alt="size">
-                    <img src="" alt="bold">
-                    <img src="" alt="italic">
-                    <img src="" alt="underligne">
-                    <img src="" alt="color">
-                    <img src="" alt="start">
-                    <img src="" alt="center">
-                    <img src="" alt="end">
+                    <img src="img/g-herbe.jpg" alt="bold">
+                    <img src="img/i-color.jpg" alt="italic">
+                    <img src="img/s.png" alt="underligne">
+                    <img src="img/gauche.png" alt="start">
+                    <img src="img/center.png" alt="center">
+                    <img src="img/droite.png" alt="end">
                 </div>
 
                 <!-- <div id="insert-image">
