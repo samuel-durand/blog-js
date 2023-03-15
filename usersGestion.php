@@ -131,9 +131,9 @@ class usersGestion
 $user = new usersGestion;
 
 // $user->register("toto@boritos.com","toto","momo");
-// $user->register("dio@jojo.com","dio","piano");
-//$user->connection("Boruto@boritos.com","momo");
-//$user->connection("admin@wild.com","azeradmin");
+// $user->register("josuke@jojo.com","josuke","stand");
+// $user->connection("Boruto@boritos.com","momo");
+// $user->connection("admin@wild.com","azeradmin");
 // echo $user->getAllUsers()['email'];
 // echo $user->getAllUsers()['email'];
 // echo $user->getAllUsers()['email'];
