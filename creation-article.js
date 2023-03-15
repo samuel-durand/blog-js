@@ -9,9 +9,22 @@ function format(f) {
 
 // Select
 
-const bold = document.querySelector('#bold');
-const italic = document.querySelector('#italic');
-const underligne = document.querySelector('#underligne');
-const start = document.querySelector('#start');
-const center = document.querySelector('#center');
-const end = document.querySelector('#end');
+const bold = document.body.querySelector('#bold');
+const italic = document.body.querySelector('#italic');
+const underligne = document.body.querySelector('#underligne');
+const start = document.body.querySelector('#start');
+const center = document.body.querySelector('#center');
+const end = document.body.querySelector('#end');
+
+// Event
+bold.addEventListener('click', () => {
+    format('b');
+});
+
+italic.addEventListener('click', () => {
+    format('i');
+});
+
+bold.addEventListener('click', () => {
+    format('u');
+});
