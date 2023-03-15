@@ -47,41 +47,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     
     <button type="submit">Se connecter</button>
 </form>
-<script>
-document.getElementById('login-form').addEventListener('submit', function(event) {
-  event.preventDefault();
-  
-  // Récupération des données du formulaire
-  var email = document.getElementsByName('email')[0].value;
-  var password = document.getElementsByName('password')[0].value;
-  
-  // Création d'un objet FormData pour envoyer les données via AJAX
-  var formData = new FormData();
-  formData.append('email', email);
-  formData.append('password', password);
-  
-  // Envoi de la requête AJAX
-  var xhr = new XMLHttpRequest();
-  xhr.open('POST', 'login.php', true);
-  xhr.onload = function() {
-    if (xhr.status === 200) {
-      // Succès de la requête AJAX, vérification de la réponse
-      var response = JSON.parse(xhr.responseText);
-      if (response.success) {
-        // Connexion réussie, redirection vers la page profil.php
-        window.location.href = 'profil.php';
-      } else {
-        // Connexion échouée, affichage d'un message d'erreur
-        alert('Email ou mot de passe incorrect.');
-      }
-    } else {
-      // Erreur de la requête AJAX, affichage d'un message d'erreur
-      alert('Une erreur est survenue lors de la connexion.');
-    }
-  };
-  xhr.send(formData);
-});
-</script>
+
 
 </body>
 </html>

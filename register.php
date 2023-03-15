@@ -14,6 +14,8 @@ $password = $_POST['password'];
 $register_date = date('Y-m-d-H:i:s');
 
 
+//hash le password 
+
 $hash = password_hash($password, PASSWORD_BCRYPT);
 
 
@@ -25,6 +27,8 @@ $user->register($email,$username,$hash);
     }else {
         echo "veuiller remplir les champs";
     }
+    header('location:login.php');
+    exit();
 
 }
 
@@ -46,20 +50,52 @@ $user->register($email,$username,$hash);
     <title>Inscription</title>
 </head>
 <body>
-<form id="inscription-form" method="post">
+<form id="formulaire" method="post">
     <label for="email">Email:</label>
-    <input type="email" name="email" required>
+    <input type="email" id="email" name="email" required>
     
     <label for="username">Login:</label>
-    <input type="text" name="username" required>
+    <input type="text" id="username" name="username" required>
     
     <label for="password">Mot de passe:</label>
-    <input type="password" name="password" required>
+    <input type="password" id="password" name="password" required>
     
-    <button name="submit" type="submit">Ajouter utilisateur</button>
+    <button name="submit" id="submit" type="submit">Ajouter utilisateur</button>
 </form>
 
-<script>
+<script  src="https://code.jquery.com/jquery-3.6.4.js"
+  integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E="
+  crossorigin="anonymous">
+$(document).ready(function(){
+    $('#formulaire').submit(function(event){
+        // empecher la soumission du formulaire
+        event.preventDefault();
+
+        // recuperer les données du formulaire
+        var email = $('#email').val();
+        var username = $('#username').val();
+        var password = $('#password').val();
+
+        //envoyer les donner via ajax
+
+        $.ajax({
+            url: 'register.php', // form script
+            type: 'POST',
+            data: {
+                email: email,
+                username: username,
+                password: password,
+            },
+            success: function(data){
+                //si l'inscription marche
+                window.location.href = 'login.php';
+            },
+            error: function(){
+                //afficher erreur
+            }
+        });
+    });
+});
 
 </script>
 
