@@ -46,12 +46,12 @@
             </div>
 
             <div>
-                <textarea name="" id="" cols="169" rows="20"></textarea>
+                <textarea name="text" id="text" cols="169" rows="20"></textarea>
             </div>
 
         </div>
 
-        <button>Envoyer</button>
+        <button id="button">Envoyer</button>
     </main>
 
 </body>
