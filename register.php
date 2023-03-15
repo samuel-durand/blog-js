@@ -1,36 +1,35 @@
 <?php
 
-include('./connect.php');
+include('classuser.php');
+
+//verif form 
+
+if(isset($_POST['submit'])) {
+
+    if($_POST['email'] && $_POST['username'] && $_POST['password']){
+
+$email = $_POST['email'];
+$username = $_POST['username'];
+$password = $_POST['password'];
+$register_date = date('Y-m-d-H:i:s');
 
 
+$hash = password_hash($password, PASSWORD_BCRYPT);
 
-// Connexion à la base de données
-$db = new PDO("mysql:host=localhost;dbname=blog_js", "root", "");
 
-// Ajout de la colonne "register_date" à la table "users"
-$stmt = $db->prepare("ALTER TABLE users ADD register_date DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP");
-$stmt->execute();
+//inseret la requette 
 
-// Récupération du dernier id_role
-$stmt = $db->query("SELECT id_role FROM users ORDER BY id DESC LIMIT 1");
-$last_id_role = $stmt->fetchColumn();
+$user = new usersGestion ;
+$user->register($email,$username,$hash);
 
-// Incrémentation du dernier id_role
-$new_id_role = $last_id_role + 1;
+    }else {
+        echo "veuiller remplir les champs";
+    }
 
-// Hashage du mot de passe
-$hashed_password = password_hash($_POST["password"], PASSWORD_DEFAULT);
+}
 
-// Insertion du nouvel enregistrement avec le nouveau id_role et l'heure d'inscription
-$stmt = $db->prepare("INSERT INTO users (email, login, password, id_role, register_date) VALUES (:email, :login, :password, :id_role, NOW())");
-$stmt->execute(array(
-    "email" => $_POST["email"],
-    "login" => $_POST["login"],
-    "password" => $hashed_password,
-    "id_role" => $new_id_role
-));
 
-echo "Enregistrement ajouté avec succès.";
+    
 
 
 
@@ -47,38 +46,21 @@ echo "Enregistrement ajouté avec succès.";
     <title>Inscription</title>
 </head>
 <body>
-<form id="inscription-form">
+<form id="inscription-form" method="post">
     <label for="email">Email:</label>
     <input type="email" name="email" required>
     
-    <label for="login">Login:</label>
-    <input type="text" name="login" required>
+    <label for="username">Login:</label>
+    <input type="text" name="username" required>
     
     <label for="password">Mot de passe:</label>
     <input type="password" name="password" required>
     
-    <button type="submit">Ajouter utilisateur</button>
+    <button name="submit" type="submit">Ajouter utilisateur</button>
 </form>
 
 <script>
-    const form = document.getElementById('inscription-form');
-    
-    form.addEventListener('submit', function(event) {
-        event.preventDefault();
-        
-        const formData = new FormData(form);
-        
-        fetch('register.php', {
-            method: 'POST',
-            body: formData
-        })
-        .then(response => {
-            if (response.ok) {
-                window.location.href = 'login.php';
-            }
-        })
-        .catch(error => console.error(error));
-    });
+
 </script>
 
 </body>
