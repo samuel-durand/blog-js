@@ -10,6 +10,10 @@ main {
     align-items: center;
 }
 
+button {
+    margin: 1%;
+}
+
 /* Onglet */
 #tabs {
     border-bottom: 1px solid black;
