@@ -44,6 +44,10 @@
                 </div> -->
             </div>
 
+            <div>
+                <textarea name="" id="" cols="169" rows="20"></textarea>
+            </div>
+
         </div>
 
         <button>Envoyer</button>
