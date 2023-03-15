@@ -77,13 +77,15 @@ class usersGestion
         $this->email = $email;
         $password;
         $logged = false;
+        session_start();                      
 
         foreach ($userDatabase as $user) { //je lis le contenu de la table de la BDD
 
-            if ($email === $user['email'] && $password === $user['password']) {                         
+            if ($email === $user['email'] && $password === $user['password']) {   
                 $_SESSION['email'] = $email;
                 $id = $user['id'];  
                 $_SESSION['id'] = $id;
+                $_SESSION["username"] = $user["username"];
                 $logged = true;
                 break;
 
@@ -92,6 +94,8 @@ class usersGestion
             }
 
         }
+
+        //echo $_SESSION["username"];
 
         if( $logged ) {
             echo "vous êtes connecté";
@@ -125,8 +129,11 @@ class usersGestion
 }
 
 $user = new usersGestion;
-$user->register("mako@ropo8558.com","mak5878","globy45458");
-//$user->connection("gambos@yomo.com","prolo");
+
+// $user->register("toto@boritos.com","toto","momo");
+// $user->register("dio@jojo.com","dio","piano");
+//$user->connection("Boruto@boritos.com","momo");
+//$user->connection("admin@wild.com","azeradmin");
 // echo $user->getAllUsers()['email'];
 // echo $user->getAllUsers()['email'];
 // echo $user->getAllUsers()['email'];
