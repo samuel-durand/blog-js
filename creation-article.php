@@ -27,12 +27,12 @@
 
             <div id="tools">
                 <div id="tools-text">
-                    <img src="img/g-herbe.jpg" alt="bold">
-                    <img src="img/i-color.jpg" alt="italic">
-                    <img src="img/s.png" alt="underligne">
-                    <img src="img/gauche.png" alt="start">
-                    <img src="img/center.png" alt="center">
-                    <img src="img/droite.png" alt="end">
+                    <img id="bold" src="img/g-herbe.jpg" alt="bold">
+                    <img id="italic" src="img/i-color.jpg" alt="italic">
+                    <img id="underligne" src="img/s.png" alt="underligne">
+                    <img id="start" src="img/gauche.png" alt="start">
+                    <img id="center" src="img/center.png" alt="center">
+                    <img id="end" src="img/droite.png" alt="end">
                 </div>
 
                 <!-- <div id="insert-image">
