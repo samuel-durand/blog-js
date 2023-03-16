@@ -7,6 +7,8 @@
     font-weight: 400;
     margin: 0;
     padding: 0;
+    text-decoration: none;
+    
     
 }
 
@@ -32,6 +34,8 @@ header nav {
     align-items: center;
    
 }
+
+
 
 
 
@@ -77,6 +81,8 @@ section table tr td button {
     background-color: #04AA6D;
     border: 05px;
     border-radius: 5px;
+    font-size: 18px;
+    font-weight: 300;
     color: white;
     padding: 15px 32px;
     text-align: center;
@@ -90,3 +96,51 @@ section table tr td button:hover{
     background-color: #02d386;
 }
 
+
+section table tr td button a {
+    color: white;
+    text-decoration: none;}
+
+    section table tr td button a:visited{
+        color: red;
+    }
+
+
+
+/*register form */
+
+.form-main {
+
+
+}
+
+.form-main form {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+    height: 350px;
+    background-color: rgba( 255, 255, 255, 10 ) ;
+    background: rgba( 255, 255, 255, 0.1 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 0.5px );
+    -webkit-backdrop-filter: blur( 0.5px );
+    border: 5px solid rgba( 255, 255, 255, 0.18 );
+    border-radius: 10px;
+    margin: auto;
+    width: 40%;
+}
+
+form input{
+    background: rgba(255, 255, 255, 0.2);
+	border: 3px solid rgba(255, 255, 255, 0.342);
+	border-radius: 5px;
+	margin: 5px;
+	width: 120px;
+}
+
+form input:focus{
+    outline: none;
+
+}
