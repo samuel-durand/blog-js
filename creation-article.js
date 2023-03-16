@@ -1,6 +1,7 @@
 // function 
 function format(f) {
     var str = document.selection.createRange().text;
+    //console.log(str);
     document.article.text1.focus();
     var sel = document.selection.createRange();
     sel.text = "<" + f + ">" + str + "</" + f + ">";
@@ -25,6 +26,6 @@ italic.addEventListener('click', () => {
     format('i');
 });
 
-bold.addEventListener('click', () => {
+underligne.addEventListener('click', () => {
     format('u');
 });
