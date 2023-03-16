@@ -59,9 +59,9 @@ class usersGestion
           $request = $this->database->prepare("INSERT INTO roles(rights, description) VALUES (?, ?)");
           $request->execute(array($right,$right_description));
         //on lie les table la table role et users au niveau de l'id.
-          $requestUserAndRole = $this->database->prepare('SELECT `email` , `username` , `register_date` , `rights`, `description` FROM users INNER JOIN roles ON roles.id = users.role_id ORDER BY `register_date` DESC ');
-          $requestUserAndRole->execute();
-          $displayUserAndRight = $request->fetchAll(PDO::FETCH_ASSOC);
+        //   $requestUserAndRole = $this->database->prepare('SELECT `email` , `username` , `register_date` , `rights`, `description` FROM users INNER JOIN roles ON roles.id = users.role_id ORDER BY `register_date` DESC ');
+        //   $requestUserAndRole->execute();
+        //   $displayUserAndRight = $request->fetchAll(PDO::FETCH_ASSOC);
           echo "tu est inscrit";
         }        
           
@@ -131,7 +131,7 @@ class usersGestion
 $user = new usersGestion;
 
 // $user->register("toto@boritos.com","toto","momo");
-// $user->register("josuke@jojo.com","josuke","stand");
+// $user->register("jim@jojo.com","jim","stand");
 // $user->connection("Boruto@boritos.com","momo");
 // $user->connection("admin@wild.com","azeradmin");
 // echo $user->getAllUsers()['email'];

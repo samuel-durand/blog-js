@@ -7,14 +7,21 @@ $user = new usersGestion;
     $request->execute();
     $displayUserAndRight = $request->fetchAll(PDO::FETCH_ASSOC);
     $resquestUser = $user->getData()->prepare('SELECT * FROM user');
-    var_dump($displayUserAndRight); 
+    //var_dump($displayUserAndRight); 
 
-    // if (isset($_POST["submit"])) {
-    //     $requestRight = $user->getData()->prepare('UPDATE right FROM role where ');
-    // }
+    //$_POST["role_id"];
 
 
-
+    if (isset($_POST["submit"])) {
+        $right = $_POST['right'];
+        $id_row = $_POST["role_id"];
+        $requestRight = $user->getData()->prepare('UPDATE roles SET rights = (?) WHERE id = (?)');
+        $requestRight->execute(array($right, $id_row));
+        echo "HELOOOOOO";
+    }
+    var_dump($_POST['right']);
+    var_dump($_POST['role_id']);
+        
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -56,14 +63,15 @@ $user = new usersGestion;
                         <?php else: ?>
                         <td><a href="delete_user.php?id=<?= $user['id'];?>">delete <?= $user['username']; ?> </a></td>
                         <td>
-                            <form action="" method="post">
+                            <form method="post">
                             <label for="right"><?= $user['id'] ?> Changer les droits</label>
                                 <select name="right" id="right">
                                     <option value="subscribed">subscribed</option>
                                     <option value="moderator">moderator</option>
                                     <option value="administrator">administrator</option>
                                 </select>
-                                <button type="submit">valider</button>
+                                <input type="hidden" name="role_id" value="<?= $user['id'];?>">
+                                <input type="submit" name="submit" value="valider">
                             </form></td>
                         <?php endif; ?>
                     </tr>
