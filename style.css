@@ -16,6 +16,14 @@ body {
     background-color: #ffc56096;
 }
 
+a {
+    color: white;
+}
+
+a:visited{
+    color: red;
+}
+
 
 header {
     display: flex;
@@ -111,7 +119,7 @@ section table tr td button a {
 
 .form-main {
 
-
+    padding: 100px;
 }
 
 .form-main form {
@@ -120,6 +128,7 @@ section table tr td button a {
     text-align: center;
     align-items: center;
     flex-direction: column;
+    overflow: hidden;
     height: 350px;
     background-color: rgba( 255, 255, 255, 10 ) ;
     background: rgba( 255, 255, 255, 0.1 );
@@ -137,10 +146,88 @@ form input{
 	border: 3px solid rgba(255, 255, 255, 0.342);
 	border-radius: 5px;
 	margin: 5px;
-	width: 120px;
+	width: 160px;
+}
+
+form button{
+    margin: 15px;
+}
+form a {
+    align-items: center;
+    text-align: center;
+    margin: 15px;
 }
 
 form input:focus{
     outline: none;
 
+}
+
+form input[type=text]{
+    width: 160px;
+    transition: width .35s ease-in-out;
+}
+
+form input[type=text]:focus{
+    width: 180px;
+}
+
+
+
+form input[type=email]{
+    width: 160px;
+    transition: width .35s ease-in-out;
+}
+
+form input[type=email]:focus{
+    width: 180px;
+}
+
+form input[type=password]{
+    width: 160px;
+    transition: width .35s ease-in-out;
+}
+
+form input[type=password]:focus{
+    width: 180px;
+}
+
+
+
+
+form button {
+    background: rgba(255, 255, 255, 0.2);
+	border: 3px solid rgba(255, 255, 255, 0.342);
+	border-radius: 5px;
+    font-size: 18px;
+    font-weight: 300;
+    color: black;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+
+/*index*/
+
+#title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#index {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#index section {
+    text-align: center;
+    width: 80%;
+    font-size: 20px;
 }
