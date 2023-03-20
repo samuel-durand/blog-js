@@ -11,7 +11,7 @@
 </head>
 <body>
     <?php include('header.php') ?>
-    <div class="padding">
+    <div class="margin">
     <main>
         <div id="article">
             <div id="menu">

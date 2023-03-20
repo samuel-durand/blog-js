@@ -25,31 +25,6 @@ a:visited{
 }
 
 
-header {
-    display: flex;
-    justify-content: center;
-    position: relative;
-    color: white;
-    top: 0;
-    background-color: #5EC262;
-
-}
-
-
-header nav {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-   
-}
-
-
-
-
-
-header nav h1 {
-    margin: 15px;
-}
 
 /*admin*/
 
@@ -211,6 +186,7 @@ form button {
 }
 
 
+
 /*index*/
 
 #title {
@@ -218,6 +194,7 @@ form button {
     justify-content: center;
     align-items: center;
     text-align: center;
+    margin: 10px;
 }
 
 #index {
@@ -230,4 +207,14 @@ form button {
     text-align: center;
     width: 80%;
     font-size: 20px;
+}
+
+/*reponsive */
+
+@media screen and (max-width: 768px) {
+    section p {
+        display: flex;
+        justify-content: space-evenly;
+        text-align: left;
+    }
 }

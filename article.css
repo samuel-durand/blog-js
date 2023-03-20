@@ -15,11 +15,12 @@
 body {
     background-color: #ffc56096;
 }
-.padding {
-    padding: 50px;
+.margin {
+    margin: auto;
+    padding: 60px;
 }
 
-.padding main {
+.margin main {
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -30,7 +31,7 @@ body {
     overflow: hidden;
     margin: auto;
     padding: 25px;
-    width: 60%;
+    width: 80%;
 }
 
 button {
@@ -129,4 +130,33 @@ textarea:focus {
     background-color: #02d386;
  }
 
- 
+ /*responsive */
+
+
+
+
+@media screen and (max-width: 768px) {
+
+    .margin {
+        margin: auto;
+    }
+
+
+.margin main {
+    display:inline-block;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    border: 5px solid #5EC262;
+    border-radius: 5px;
+    background-color: bisque;
+    height: 350px;
+    width: 250px;
+
+}
+
+.margin main textarea {
+    height: 150px;
+    width: 100%;
+}
+}

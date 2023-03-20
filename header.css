@@ -72,6 +72,7 @@
     }
   
     .mobile-menu-icon.active span:nth-child(1) {
+        
       transform: rotate(45deg);
       top: 10px;
     }
