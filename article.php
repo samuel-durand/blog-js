@@ -20,7 +20,6 @@
                 <h1>contenue article</h1>
             </div>
         </div>
-        <input type="text" placeholder="titre">
         <label for="commentaire">Commentaire :</label>
         <textarea name="commentaire" id="commentaire"></textarea>
         <form method="post">
