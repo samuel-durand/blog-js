@@ -10,12 +10,20 @@
 <body>
     <?php include('header.php') ?>
 
+
     <main>
-        <form method="post"></form>
-        <h1>TITRE</h1>
+        <div>
+            <p>titre</p>
+            <p>userame</p>
+            <p>date</p>
+            <div>
+                <h1>contenue article</h1>
+            </div>
+        </div>
         <input type="text" placeholder="titre">
         <label for="commentaire">Commentaire :</label>
         <textarea name="commentaire" id="commentaire"></textarea>
+        <form method="post">
         <button type="submit" name="submit">Commenter</button> 
         </form>       
     </main>
