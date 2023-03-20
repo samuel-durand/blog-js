@@ -218,3 +218,27 @@ form button {
         text-align: left;
     }
 }
+
+/*comment section*/
+
+ .comments main {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    height: 100px;
+
+
+}
+
+.commemnts main section {
+
+}
+
+
+main section  form{
+    display: flex;
+    flex-direction: column;
+    background-color: #7BB292;
+
+}

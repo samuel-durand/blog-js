@@ -7,6 +7,7 @@
   header nav {
     height: 80px;
     background-color:   #B5D3A7;
+    margin: auto;
     width: 100%;
     display: flex;
     justify-content: center;
