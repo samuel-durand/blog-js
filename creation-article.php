@@ -14,8 +14,7 @@
     <div class="margin">
     <main>
         <form method="post">
-        <h1>titre</h1>
-        <label for="titles">titre :</label>
+        <label for="titles">titre de l'article:</label>
         <input type="text" placeholder="votre titre">
         <div id="article">
             <div id="menu">
