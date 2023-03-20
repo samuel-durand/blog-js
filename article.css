@@ -13,11 +13,11 @@
 
 
 body {
-    background-color: #ffc56096;
+    background-color: #B5D3A7;
 }
 .margin {
     margin: auto;
-    padding: 60px;
+    padding: 40px;
 }
 
 .margin main {
@@ -25,17 +25,16 @@ body {
     flex-direction: column;
     text-align: center;
     align-items: center;
-    border: 5px solid#5EC262;
+    border: 5px solid #D8FFC2;
+    background-color: #7BB292;
     border-radius: 05px;
-    background-color: bisque;
     overflow: hidden;
     margin: auto;
-    padding: 25px;
     width: 80%;
 }
 
 button {
-    margin: 1%;
+    margin: 1px;
 }
 
 /* Onglet */
@@ -112,7 +111,7 @@ textarea:focus {
     display: flex;
     justify-content: center;
     margin: auto;
-    background-color: #04AA6D;
+    background-color: #3eaa6b;
     border: 05px;
     border-radius: 5px;
     font-size: 18px;
@@ -137,8 +136,17 @@ textarea:focus {
 
 @media screen and (max-width: 768px) {
 
+
+
     .margin {
-        margin: auto;
+        
+            margin: 0 auto;
+            padding: 20px; /* add 20px padding */
+            padding-top: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
     }
 
 
@@ -149,9 +157,9 @@ textarea:focus {
     align-items: center;
     border: 5px solid #5EC262;
     border-radius: 5px;
-    background-color: bisque;
-    height: 350px;
-    width: 250px;
+    padding: 15px;
+    height: 450px;
+    width: 350px;
 
 }
 
@@ -160,3 +168,53 @@ textarea:focus {
     width: 100%;
 }
 }
+
+
+/* for screens with a minimum width of 769px */
+@media only screen and (min-width: 769px) {
+    .margin {
+      margin: 0 auto;
+      padding: 20px; /* add 20px padding */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-top: 50px; /* add 50px padding top */
+    }
+  
+    .margin main {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      align-items: center;
+      border: 5px solid #7BB292;
+      background-color: #7BB292;
+      border-radius: 5px;
+      padding: 15px;
+      width: 80%; /* main takes up 80% of the page */
+    }
+  }
+  
+  /* for screens with a maximum width of 768px */
+  @media only screen and (max-width: 768px) {
+    .margin {
+      margin: 0 auto;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-top: 10px; /* add 50px padding top */
+    }
+  
+    .margin main {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      align-items: center;
+      border: 5px solid #5EC262;
+      border-radius: 5px;
+      padding: 15px;
+      max-height: 100%;
+      max-width: 100%;
+    }
+  }
+  

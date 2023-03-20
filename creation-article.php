@@ -13,6 +13,10 @@
     <?php include('header.php') ?>
     <div class="margin">
     <main>
+        <form method="post">
+        <h1>titre</h1>
+        <label for="titles">titre :</label>
+        <input type="text" placeholder="votre titre">
         <div id="article">
             <div id="menu">
                 <ul id="tabs">
@@ -43,8 +47,9 @@
             </div>
         </div>
         <div class="pad-button">
-        <button id="button">Envoyer</button> 
+        <button for="submit" id="button">Envoyer</button> 
         </div>
+        </form>
     </main>
     </div>
 
