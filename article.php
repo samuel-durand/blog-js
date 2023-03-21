@@ -15,6 +15,7 @@
         <div>
             <p>titre</p>
             <p>userame</p>
+            <p>role_id</p>
             <p>date</p>
             <div>
                 <h1>contenue article</h1>
