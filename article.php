@@ -17,6 +17,7 @@
             <p>userame</p>
             <p>role_id</p>
             <p>date</p>
+            <p>categorie</p>
             <div>
                 <h1>contenue article</h1>
             </div>
