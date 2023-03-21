@@ -1,26 +1,32 @@
 <?php
 
 session_start();
-require_once("usersGestion.php");
+include("usersGestion.php");
 $user = new usersGestion;    
-    $request = $user->getData()->prepare('SELECT u.`id` , `email` , `username` , `register_date` , `rights`, `description` FROM users u INNER JOIN roles ON roles.id = u.role_id ORDER BY `register_date` DESC ');
-    $request->execute();
-    $displayUserAndRight = $request->fetchAll(PDO::FETCH_ASSOC);
-    $resquestUser = $user->getData()->prepare('SELECT * FROM user');
+    // $request = $user->getData()->prepare('SELECT u.`id` , `email` , `username` , `register_date` , `rights`, `description` FROM users u INNER JOIN roles ON roles.id = u.role_id ORDER BY `register_date` DESC ');
+    // $request->execute();
+    // $displayUserAndRight = $request->fetchAll(PDO::FETCH_ASSOC);
+    // $resquestUser = $user->getData()->prepare('SELECT * FROM users');
     //var_dump($displayUserAndRight); 
-
+    
     //$_POST["role_id"];
 
 
     if (isset($_POST["submit"])) {
-        $right = $_POST['right'];
-        $id_row = $_POST["role_id"];
+        $right = $_POST['right']; //sa valeur dépend du form avec option entre subscribed, moderator, administrator.
+        $id_row = $_POST["role_id"]; 
         $requestRight = $user->getData()->prepare('UPDATE roles SET rights = (?) WHERE id = (?)');
         $requestRight->execute(array($right, $id_row));
-        echo "HELOOOOOO";
+        header('Refresh:0');
+    
     }
-    var_dump($_POST['right']);
-    var_dump($_POST['role_id']);
+
+    $request = $user->getData()->prepare('SELECT u.`id` , `email` , `username` , `register_date` , `rights`, `description` FROM users u INNER JOIN roles ON roles.id = u.role_id ORDER BY `register_date` DESC ');
+    $request->execute();
+    $displayUserAndRight = $request->fetchAll(PDO::FETCH_ASSOC);
+    $resquestUser = $user->getData()->prepare('SELECT * FROM users');
+    // var_dump($_POST['right']);
+    // var_dump($_POST['role_id']);
         
 ?>
 <!DOCTYPE html>
@@ -50,12 +56,13 @@ $user = new usersGestion;
                     <th></th>
                     <th>changement de droit</th>
                 </tr>
-            </thead><tbody>
+            </thead>
+            <tbody>
                 <?php foreach ($displayUserAndRight as $user): ?>
                     <tr>            
                         <td><?= $user['email'] ?></td>
                         <td><?= $user['username'] ?></td>
-                        <td><?= $user['register_date'] ?></td>
+                        <td><?= date('d-m-Y H:i:s', strtotime($user['register_date'])) ?></td>
                         <td><?= $user['rights'] ?></td>
                         <td><?= $user['description'] ?></td>
                         <?php if($user['username'] == 'admin'): ?>
@@ -76,7 +83,7 @@ $user = new usersGestion;
                         <?php endif; ?>
                     </tr>
                 <?php endforeach; ?>
-        </tbody>
+            </tbody>
         </table>
     </section>
 </body>

@@ -9,8 +9,7 @@ class usersGestion
     private $email;
 
     //Constructeur
-    public function __construct(){
-
+    public function __construct(){ 
         try {
             $this->database = new PDO('mysql:host=localhost;dbname=blog_js;charset=utf8;port=3307', 'root', '');
         } catch(Exception $e) {
@@ -69,15 +68,15 @@ class usersGestion
     }
 
     public function connection($email, $password) {
-
-        $request = $this->database->prepare('SELECT * FROM users');
+        session_start();
+        $request = $this->database->prepare('SELECT u.`id` , `email` , `username` , `password` , `rights` FROM users u INNER JOIN roles ON roles.id = u.role_id');
         $request->execute(array());
         $userDatabase = $request->fetchAll(PDO::FETCH_ASSOC);
 
         $this->email = $email;
         $password;
         $logged = false;
-        session_start();                      
+                             
 
         foreach ($userDatabase as $user) { //je lis le contenu de la table de la BDD
 
@@ -86,20 +85,21 @@ class usersGestion
                 $id = $user['id'];  
                 $_SESSION['id'] = $id;
                 $_SESSION["username"] = $user["username"];
+                $_SESSION["rights"] = $user["rights"];
                 $logged = true;
                 break;
 
             } else {
                 $logged = false;
             }
-
-        }
+            var_dump($user);
+            }
 
         //echo $_SESSION["username"];
 
         if( $logged ) {
-            echo "vous êtes connecté";
-            //header("Location:index.php");
+            echo "vous êtes connecté ".$_SESSION['username']." en tant que: ".$_SESSION['rights'];
+            var_dump($user);
         } else {
             echo "erreur dans l'email ou le password</br>";
         }
@@ -109,30 +109,31 @@ class usersGestion
     public function getData() {
         return $this->database;
     }
-    public function getAllUsers() {
+    // public function getAllUsers() {
 
-        $request = $this->database->prepare('SELECT * FROM users');
-        $request->execute(array());
-        $userDatabase = $request->fetchAll(PDO::FETCH_ASSOC);
+    //     $request = $this->database->prepare('SELECT * FROM users');
+    //     $request->execute(array());
+    //     $userDatabase = $request->fetchAll(PDO::FETCH_ASSOC);
 
-        foreach ($userDatabase as $user) {
+    //     foreach ($userDatabase as $user) {
             
             
            
-        }
+    //     }
 
         
 
-    }
+    // }
 
 
 }
 
 $user = new usersGestion;
 
-// $user->register("toto@boritos.com","toto","momo");
-// $user->register("jim@jojo.com","jim","stand");
-// $user->connection("Boruto@boritos.com","momo");
+//  $user->register("maloo@.com","maloo","boubou");
+//  $user->register("yolo@fimo.com","yolo","stand");
+     $user->connection("elmacho@dino.com","pocoloco");
+// $user->connection("Boruto@boritos.com","momo"); 
 // $user->connection("admin@wild.com","azeradmin");
 // echo $user->getAllUsers()['email'];
 // echo $user->getAllUsers()['email'];
