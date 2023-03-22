@@ -11,7 +11,7 @@
 
 
 footer {
-    position: absolute;
+    position: relative;
     left: 0;
     bottom: 10;
     display: flex;
@@ -30,55 +30,24 @@ footer ul li {
 
 }
 
-@media only screen and (min-width: 667px) {
-    footer {
+@media only screen and (max-width: 1000px) and (min-width: 1px) {
+  footer {
       position: absolute;
       left: 0;
       bottom: 0;
-      width: 100%;
-    }
   }
+}
 
-@media only screen and (min-width: 360px) {
+
+  @media only screen and (max-width: 1000px) and (min-width: 823px) {
     footer {
-      position: absolute;
-      left: 0;
-      bottom: 0;
-      width: 100%;
-    }
-  }
-
-
-@media only screen and (min-width: 375px) {
-    footer {
-      position: absolute;
-      left: 0;
-      bottom: 0;
-      width: 100%;
-    }
-  }
-
-
-@media only screen and (min-width: 412px) {
-    footer {
-      position: absolute;
-      left: 0;
-      bottom: 0;
-      width: 100%;
-    }
-  }
-
-
-@media only screen and (min-width: 896px) {
-    footer {
-        position: absolute;
+        position: relative;
         left: 0;
         bottom: 0;
     }
   }
 
-
-  @media only screen and (min-width: 1024px) {
+  @media only screen and (max-width: 2000px) and (min-width: 1000px) {
     footer {
         position: absolute;
         left: 0;
