@@ -13,7 +13,7 @@
 }
 
 body {
-    background-color:  #B5D3A7;
+    background-color:  #3B5249
 }
 
 a {
@@ -105,23 +105,24 @@ section table tr td button a {
     flex-direction: column;
     overflow: hidden;
     height: 350px;
-    background-color: rgba( 255, 255, 255, 10 ) ;
-    background: rgba( 255, 255, 255, 0.1 );
-    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    background-color: #5fa087;
     backdrop-filter: blur( 0.5px );
     -webkit-backdrop-filter: blur( 0.5px );
     border: 5px solid rgba( 255, 255, 255, 0.18 );
     border-radius: 10px;
     margin: auto;
-    width: 40%;
+    height: 500px;
+    width: 50%;
 }
 
 form input{
     background: rgba(255, 255, 255, 0.2);
 	border: 3px solid rgba(255, 255, 255, 0.342);
 	border-radius: 5px;
+    padding: 9px 10px;
+    font-size: 15px;
 	margin: 5px;
-	width: 160px;
+	width: 190px;
 }
 
 form button{
@@ -139,32 +140,32 @@ form input:focus{
 }
 
 form input[type=text]{
-    width: 160px;
+    width: 300px;
     transition: width .35s ease-in-out;
 }
 
 form input[type=text]:focus{
-    width: 180px;
+    width: 320px;
 }
 
 
 
 form input[type=email]{
-    width: 160px;
+    width: 300px;
     transition: width .35s ease-in-out;
 }
 
 form input[type=email]:focus{
-    width: 180px;
+    width: 320px;
 }
 
 form input[type=password]{
-    width: 160px;
+    width: 300px;
     transition: width .35s ease-in-out;
 }
 
 form input[type=password]:focus{
-    width: 180px;
+    width: 320px;
 }
 
 
@@ -183,6 +184,11 @@ form button {
     display: inline-block;
     margin: 4px 2px;
     cursor: pointer;
+}
+
+main form label {
+    font-size: 15px;
+    margin: 15px;
 }
 
 

@@ -10,21 +10,25 @@
 <body>
     <?php include('header.php') ?>
 
-        <main>
-                <h1>TITRE</h1>
-                <textarea name="" id="" cols="30" rows="10"></textarea>        
-                
 
-        </main>
-    
-    
-
-
-
-
-
+    <main>
+        <div>
+            <p>titre</p>
+            <p>userame</p>
+            <p>role_id</p>
+            <p>date</p>
+            <p>categorie</p>
+            <div>
+                <h1>contenue article</h1>
+            </div>
+        </div>
+        <label for="commentaire">Commentaire :</label>
+        <textarea name="commentaire" id="commentaire"></textarea>
+        <form method="post">
+        <button type="submit" name="submit">Commenter</button> 
+        </form>       
+    </main>
 
     <?php include('footer.php') ?>
-    
 </body>
 </html>

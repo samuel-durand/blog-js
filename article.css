@@ -16,9 +16,11 @@ body {
     background-color: #B5D3A7;
 }
 .margin {
-    margin: auto;
-    padding: 40px;
-    padding-bottom: 20px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1 0 auto;
 }
 
 .margin main {
@@ -26,13 +28,12 @@ body {
     flex-direction: column;
     text-align: center;
     align-items: center;
-    border: 5px solid #D8FFC2;
     background-color: #7BB292;
     border-radius: 05px;
     overflow: hidden;
-    margin: auto;
     width: 80%;
 }
+
 
 .margin main h1 {
     color: white;
@@ -167,147 +168,525 @@ textarea:focus {
 
 
 
-@media screen and (max-width: 768px) {
-
-
-
-    .margin {
-        
-            margin: 0 auto;
-            padding: 20px; /* add 20px padding */
-            padding-top: 15px;
-            padding-bottom: 30px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-
-    }
-
-
-.margin main {
-    display:inline-block;
-    flex-direction: column;
-    text-align: center;
-    align-items: center;
-    border: 5px solid #5EC262;
-    border-radius: 5px;
-    padding: 15px;
-    height: 450px;
-    width: 350px;
-
-}
-
-.margin main textarea {
-    height: 150px;
-    width: 100%;
-}
-}
-
-
 /* for screens with a minimum width of 769px */
+@media only screen and (min-width: 375px) {
+    .margin {
+        margin: 0 auto;
+        padding: 20px; /* add 20px padding */
+        padding-bottom: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .margin main {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        background-color: #7BB292;
+        border-radius: 5px;
+        padding: 15px;
+        height: 430px;
+        width: 80%; /* main takes up 80% of the page */
+        margin: 0 auto; /* center the main element horizontally */
+    }
+    
+    .margin main textarea {
+        height: 130px;
+    }
+}
+
+/* for screens with a maximum width of 768px */
+@media only screen and (min-width: 414px) {
+    .margin {
+        margin: 0 auto;
+        padding: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    
+    .margin main {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        border-radius: 5px;
+        padding: 20px;
+        margin: 20px;
+        height: 630px;
+        width: 90%;
+
+        margin: 0 auto; /* center the main element horizontally */
+    }
+    
+    .margin main textarea {
+        height: 320px;
+        width: 100%;
+        margin-top: 20px;
+    }
+}
+
+/* for screens with a maximum width of 768px */
+@media only screen and (min-width: 360px) {
+    .margin {
+        margin: 0 auto;
+        padding: 25px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    
+    .margin main {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        border-radius: 5px;
+        padding: 20px;
+        margin: 20px;
+        height: 500px;
+        width: 90%;
+
+        margin: 0 auto; /* center the main element horizontally */
+    }
+    
+    .margin main textarea {
+        height: 190px;
+        width: 100%;
+        margin-top: 20px;
+    }
+}
+
+
+/* for screens with a maximum width of 768px */
+@media only screen and (min-width: 375px) {
+    .margin {
+        margin: 0 auto;
+        padding: 25px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    
+    .margin main {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        border-radius: 5px;
+        padding: 20px;
+        margin: 20px;
+        height: 420px;
+        width: 90%;
+
+        margin: 0 auto; /* center the main element horizontally */
+    }
+    
+    .margin main textarea {
+        height: 110px;
+        width: 100%;
+        margin-top: 20px;
+    }
+}
+
+
+/* for screens with a maximum width of 768px */
+@media only screen and (min-width: 390px) {
+    .margin {
+        margin: 0 auto;
+        padding: 25px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    
+    .margin main {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        border-radius: 5px;
+        padding: 20px;
+        margin: 20px;
+        height: 600px;
+        width: 90%;
+
+        margin: 0 auto; /* center the main element horizontally */
+    }
+    
+    .margin main textarea {
+        height: 290px;
+        width: 100%;
+        margin-top: 20px;
+    }
+}
+
+
+/* for screens with a maximum width of 768px */
+@media only screen and (min-width: 414px) {
+    .margin {
+        margin: 0 auto;
+        padding: 25px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    
+    .margin main {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        border-radius: 5px;
+        padding: 20px;
+        margin: 20px;
+        height: 680px;
+        width: 95%;
+
+        margin: 0 auto; /* center the main element horizontally */
+    }
+    
+    .margin main textarea {
+        height: 350px;
+        width: 100%;
+        margin-top: 20px;
+    }
+}
+
+/* for screens with a maximum width of 768px */
 @media only screen and (min-width: 768px) {
     .margin {
-      margin: 0 auto;
-      padding: 20px; /* add 20px padding */
-      padding-bottom: 20px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding-top: 50px; /* add 50px padding top */
+        margin: 0 auto;
+        padding: 25px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
     }
-  
+    
     .margin main {
-      display: flex;
-      flex-direction: column;
-      text-align: center;
-      align-items: center;
-      border: 5px solid #7BB292;
-      background-color: #7BB292;
-      border-radius: 5px;
-      padding: 15px;
-      height: 800px;
-      width: 80%; /* main takes up 80% of the page */
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        border-radius: 5px;
+        padding: 20px;
+        margin: 20px;
+        height: 780px;
+        width: 95%;
+
+        margin: 0 auto; /* center the main element horizontally */
     }
+    
     .margin main textarea {
         height: 450px;
+        width: 100%;
+        margin-top: 20px;
     }
-  }
+}
 
 
-
-  
-  /* for screens with a maximum width of 768px */
-  @media only screen and (max-width: 768px) {
+/* for screens with a maximum width of 768px */
+@media only screen and (min-width: 812px) {
     .margin {
-      margin: 0 auto;
-      padding: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding-top: 10px; /* add 50px padding top */
+        margin: 0 auto;
+        padding: 25px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
     }
-  
+    
     .margin main {
-      display: flex;
-      flex-direction: column;
-      text-align: center;
-      align-items: center;
-      border: 5px solid #7BB292;
-      border-radius: 5px;
-      padding: 15px;
-      max-height: 100%;
-      max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        border-radius: 5px;
+        padding: 20px;
+        margin: 20px;
+        height: 920px;
+        width: 95%;
+
+        margin: 0 auto; /* center the main element horizontally */
     }
-  }
-  
+    
+    .margin main textarea {
+        height: 600px;
+        width: 100%;
+        margin-top: 20px;
+    }
+}
 
-  @media only screen and (max-width: 400px) {
+
+@media only screen and (min-width: 912px) {
     .margin {
         margin: 0 auto;
-        padding: 10px;
+        padding: 25px;
         display: flex;
         justify-content: center;
         align-items: center;
-        padding-top: 10px; /* add 50px padding top */
-      }
-
-      .margin main {
+        flex-direction: column;
+    }
+    
+    .margin main {
         display: flex;
         flex-direction: column;
         text-align: center;
         align-items: center;
-        border: 5px solid #7BB292;
         border-radius: 5px;
-        padding: 15px;
-        max-height: 100%;
-        max-width: 100%;
-      }
-  }
+        padding: 20px;
+        margin: 20px;
+        height: 1120px;
+        width: 95%;
 
-  @media only screen and (min-width: 400px) {
+        margin: 0 auto; /* center the main element horizontally */
+    }
+    
+    .margin main textarea {
+        height: 800px;
+        width: 100%;
+        margin-top: 20px;
+    }
+}
+
+
+
+
+
+@media only screen and (min-width: 412px) {
     .margin {
         margin: 0 auto;
-        padding: 10px;
+        padding: 25px;
         display: flex;
         justify-content: center;
         align-items: center;
-        padding-top: 10px; /* add 50px padding top */
-      }
-
-      .margin main {
+        flex-direction: column;
+    }
+    
+    .margin main {
         display: flex;
         flex-direction: column;
         text-align: center;
         align-items: center;
-        border: 5px solid #7BB292;
         border-radius: 5px;
-        padding: 15px;
-        height: 650px;
-      }
+        padding: 20px;
+        margin: 20px;
+        height: 670px;
+        width: 100%;
 
-      .margin main textarea {
+        margin: 0 auto; /* center the main element horizontally */
+    }
+    
+    .margin main textarea {
         height: 350px;
-      }
-  }
+        width: 95%;
+        margin-top: 20px;
+    }
+
+}
+
+@media only screen and (min-width: 540px) {
+    .margin {
+        margin: 0 auto;
+        padding: 25px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    
+    .margin main {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        border-radius: 5px;
+        padding: 20px;
+        margin: 20px;
+        height: 480px;
+        width: 95%;
+
+        margin: 0 auto; /* center the main element horizontally */
+    }
+    
+    .margin main textarea {
+        height: 150px;
+        width: 100%;
+        margin-top: 20px;
+    }
+}
 
 
+@media only screen and (min-width: 768px) {
+    .margin {
+        margin: 0 auto;
+        padding: 25px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    
+    .margin main {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        border-radius: 5px;
+        padding: 20px;
+        margin: 20px;
+        height: 800px;
+        width: 100%;
+
+        margin: 0 auto; /* center the main element horizontally */
+    }
+    
+    .margin main textarea {
+        height: 450px;
+        width: 95%;
+        margin-top: 20px;
+    }
+
+}
+
+
+
+
+
+
+@media only screen and (min-width: 820px) {
+    .margin {
+        margin: 0 auto;
+        padding: 25px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    
+    .margin main {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        border-radius: 5px;
+        padding: 20px;
+        margin: 20px;
+        height: 930px;
+        width: 100%;
+
+        margin: 0 auto; /* center the main element horizontally */
+    }
+    
+    .margin main textarea {
+        height: 610px;
+        width: 95%;
+        margin-top: 20px;
+    }
+
+}
+
+@media only screen and (min-width: 912px) {
+    .margin {
+        margin: 0 auto;
+        padding: 25px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    
+    .margin main {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        border-radius: 5px;
+        padding: 20px;
+        margin: 20px;
+        height: 1100px;
+        width: 100%;
+
+        margin: 0 auto; /* center the main element horizontally */
+    }
+    
+    .margin main textarea {
+        height: 750px;
+        width: 95%;
+        margin-top: 20px;
+    }
+
+}
+
+@media only screen and (min-width: 1024px) {
+    .margin {
+        margin: 0 auto;
+        padding: 25px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    
+    .margin main {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        border-radius: 5px;
+        padding: 20px;
+        margin: 20px;
+        height: 360px;
+        width: 100%;
+
+        margin: 0 auto; /* center the main element horizontally */
+    }
+    
+    .margin main textarea {
+        height: 50px;
+        width: 95%;
+        margin-top: 20px;
+    }
+
+}
+
+
+@media only screen and (min-width: 1280px) {
+    .margin {
+        margin: 0 auto;
+        padding: 25px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    
+    .margin main {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        border-radius: 5px;
+        padding: 20px;
+        margin: 20px;
+        height: 550px;
+        width: 100%;
+
+        margin: 0 auto; /* center the main element horizontally */
+    }
+    
+    .margin main textarea {
+        height: 230px;
+        width: 95%;
+        margin-top: 20px;
+    }
+
+}
