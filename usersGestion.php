@@ -3,7 +3,7 @@
 class usersGestion
 {
 
-    //attribut
+    //attributs 
     private $database;
     private $id;
     private $email;
@@ -49,18 +49,11 @@ class usersGestion
             $right_description = "cette utilisateur peux écrire des commentaire sur les articles";
         }
 
-        //var_dump($userDatabase);
         if ($emailOk == true){
         //on créer l'utilisateur.
           $request = $this->database->prepare("INSERT INTO users(email, username, password, register_date) VALUES (?, ?, ?,NOW())");
           $request->execute(array($this->email,$username, $password));
-        //on lui attribue sont ses droits
-          $request = $this->database->prepare("INSERT INTO roles(rights, description) VALUES (?, ?)");
-          $request->execute(array($right,$right_description));
-        //on lie les table la table role et users au niveau de l'id.
-        //   $requestUserAndRole = $this->database->prepare('SELECT `email` , `username` , `register_date` , `rights`, `description` FROM users INNER JOIN roles ON roles.id = users.role_id ORDER BY `register_date` DESC ');
-        //   $requestUserAndRole->execute();
-        //   $displayUserAndRight = $request->fetchAll(PDO::FETCH_ASSOC);
+    
           echo "tu est inscrit";
         }        
           
@@ -92,14 +85,14 @@ class usersGestion
             } else {
                 $logged = false;
             }
-            var_dump($user);
+            //var_dump($user);
             }
 
         //echo $_SESSION["username"];
 
         if( $logged ) {
             echo "vous êtes connecté ".$_SESSION['username']." en tant que: ".$_SESSION['rights'];
-            var_dump($user);
+            //var_dump($user);
         } else {
             echo "erreur dans l'email ou le password</br>";
         }
@@ -128,12 +121,13 @@ class usersGestion
 
 }
 
-$user = new usersGestion;
+ $user = new usersGestion;
 
-//  $user->register("maloo@.com","maloo","boubou");
-//  $user->register("yolo@fimo.com","yolo","stand");
-     $user->connection("elmacho@dino.com","pocoloco");
-// $user->connection("Boruto@boritos.com","momo"); 
+// $user->register("maloo@.com","maloo","boubou");
+// $user->register("elgato@churros.com","elgato","meowmeow");
+// $user->register("yolo@fimo.com","yolo","stand");
+// $user->connection("elmacho@dino.com","pocoloco");
+// $user->connection("yolo@fimo.com","stand"); 
 // $user->connection("admin@wild.com","azeradmin");
 // echo $user->getAllUsers()['email'];
 // echo $user->getAllUsers()['email'];
