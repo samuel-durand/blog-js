@@ -750,7 +750,7 @@ textarea:focus {
         border-radius: 5px;
         padding: 20px;
         margin: 20px;
-        height: 560px;
+        height: 660px;
         width: 100%;
 
         margin: 0 auto; /* center the main element horizontally */
@@ -782,14 +782,14 @@ textarea:focus {
         border-radius: 5px;
         padding: 20px;
         margin: 20px;
-        height: 1010px;
+        height: 680px;
         width: 100%;
 
         margin: 0 auto; /* center the main element horizontally */
     }
     
     .margin main textarea {
-        height: 680px;
+        height: 320px;
         width: 95%;
         margin-top: 20px;
     }
@@ -815,7 +815,7 @@ textarea:focus {
         border-radius: 5px;
         padding: 20px;
         margin: 20px;
-        height: 920px;
+        height: 420px;
         width: 100%;
 
         margin: 0 auto; /* center the main element horizontally */
