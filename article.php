@@ -28,6 +28,32 @@ $display = $request->fetchAll(PDO::FETCH_ASSOC);
 
 //var_dump($display);
 
+// Send a comment to database
+if (isset($_POST['button'])) {
+    if ($_POST['content']) {
+
+        $request2 = $database->prepare('SELECT * FROM comments');
+        //$request = $this->database->prepare('SELECT * FROM users');
+        $request2->execute(array());
+        //$articleDB = $request->fetchAll(PDO::FETCH_ASSOC);
+
+        // $this->$content = $content;
+        // $this->$title = $title;
+        $now = "NOW()";
+        $content = $_POST['content'];
+        //var_dump($request->execute(array()));
+
+        // ENVOI DE LA REQUÊTE
+        $sql = "INSERT INTO `comments` (`content`, `creation_date`) 
+        VALUE (?,$now)";
+        $request2 = $database->prepare($sql);
+        //$request = $this->database->prepare($sql);
+        $request2->execute(array($content));
+    } else {
+        echo "Ajoute un commentaire";
+    }
+}
+
 ?>
 
 <!DOCTYPE html>
