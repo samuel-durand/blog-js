@@ -9,7 +9,24 @@ try {
     die('Erreur : ' . $e->getMessage());
 }
 
+// Connecting to the tables we need
+$request = $database->prepare("SELECT username, title, articles.content AS article, articles.creation_date AS article_date, rights, name, comments.content AS comment, comments.creation_date AS comment_date 
+                                FROM users
+                                INNER JOIN articles
+                                on users.id = articles.user_id
+                                INNER JOIN roles
+                                on users.role_id = roles.id
+                                INNER JOIN categories
+                                on articles.category_id = categories.id
+                                INNER JOIN comments
+                                on users.id = comments.user_id
+                                ORDER BY article_date DESC");
 
+$request1 = $request->execute(array());
+
+$display = $request->fetchAll(PDO::FETCH_ASSOC);
+
+//var_dump($display);
 
 ?>
 
