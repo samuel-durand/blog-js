@@ -166,42 +166,10 @@ textarea:focus {
  /*responsive */
 
 
-
-
-/* for screens with a minimum width of 769px */
-@media only screen and (min-width: 375px) {
+ @media only screen and (min-width: 280px) {
     .margin {
         margin: 0 auto;
-        padding: 20px; /* add 20px padding */
-        padding-bottom: 20px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    
-    .margin main {
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-        align-items: center;
-        background-color: #7BB292;
-        border-radius: 5px;
-        padding: 15px;
-        height: 430px;
-        width: 80%; /* main takes up 80% of the page */
-        margin: 0 auto; /* center the main element horizontally */
-    }
-    
-    .margin main textarea {
-        height: 130px;
-    }
-}
-
-/* for screens with a maximum width of 768px */
-@media only screen and (min-width: 414px) {
-    .margin {
-        margin: 0 auto;
-        padding: 30px;
+        padding: 25px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -216,18 +184,22 @@ textarea:focus {
         border-radius: 5px;
         padding: 20px;
         margin: 20px;
-        height: 630px;
-        width: 90%;
+        height: 500px;
+        width: 100%;
 
         margin: 0 auto; /* center the main element horizontally */
     }
     
     .margin main textarea {
-        height: 320px;
-        width: 100%;
+        height: 190px;
+        width: 80%;
         margin-top: 20px;
     }
-}
+ }
+
+
+
+
 
 /* for screens with a maximum width of 768px */
 @media only screen and (min-width: 360px) {
@@ -426,38 +398,6 @@ textarea:focus {
 }
 
 
-@media only screen and (min-width: 912px) {
-    .margin {
-        margin: 0 auto;
-        padding: 25px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-    }
-    
-    .margin main {
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-        align-items: center;
-        border-radius: 5px;
-        padding: 20px;
-        margin: 20px;
-        height: 1120px;
-        width: 95%;
-
-        margin: 0 auto; /* center the main element horizontally */
-    }
-    
-    .margin main textarea {
-        height: 800px;
-        width: 100%;
-        margin-top: 20px;
-    }
-}
-
-
 
 
 
@@ -489,6 +429,42 @@ textarea:focus {
         height: 350px;
         width: 95%;
         margin-top: 20px;
+    }
+
+}
+
+@media only screen and (min-width: 414px) {
+    .margin {
+        margin: 0 auto;
+        padding: 25px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    
+    .margin main {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        border-radius: 5px;
+        padding: 20px;
+        margin: 20px;
+        height: 650px;
+        width: 100%;
+
+        margin: 0 auto; /* center the main element horizontally */
+    }
+    
+    .margin main textarea {
+        height: 350px;
+        width: 95%;
+        margin-top: 20px;
+    }
+
+    .margin main .pad-button {
+        padding: 10px;
     }
 
 }
@@ -543,7 +519,7 @@ textarea:focus {
         border-radius: 5px;
         padding: 20px;
         margin: 20px;
-        height: 800px;
+        height: 780px;
         width: 100%;
 
         margin: 0 auto; /* center the main element horizontally */
@@ -644,19 +620,23 @@ textarea:focus {
         border-radius: 5px;
         padding: 20px;
         margin: 20px;
-        height: 360px;
+        height: 380px;
         width: 100%;
 
         margin: 0 auto; /* center the main element horizontally */
     }
     
     .margin main textarea {
-        height: 50px;
+        height: 100px;
         width: 95%;
         margin-top: 20px;
     }
+    .pad-button {
+    }
 
 }
+
+
 
 
 @media only screen and (min-width: 1280px) {
@@ -684,9 +664,78 @@ textarea:focus {
     }
     
     .margin main textarea {
-        height: 230px;
+        height: 250px;
         width: 95%;
         margin-top: 20px;
     }
 
 }
+
+
+
+
+@media only screen and (min-width: 1316px) {
+    .margin {
+        margin: 0 auto;
+        padding: 25px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    
+    .margin main {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        border-radius: 5px;
+        padding: 20px;
+        margin: 20px;
+        height: 1090px;
+        width: 100%;
+
+        margin: 0 auto; /* center the main element horizontally */
+    }
+    
+    .margin main textarea {
+        height: 730px;
+        width: 95%;
+        margin-top: 20px;
+    }
+
+}
+
+@media only screen and (min-width: 1341px) {
+    .margin {
+        margin: 0 auto;
+        padding: 25px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    
+    .margin main {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        border-radius: 5px;
+        padding: 20px;
+        margin: 20px;
+        height: 690px;
+        width: 100%;
+
+        margin: 0 auto; /* center the main element horizontally */
+    }
+    
+    .margin main textarea {
+        height: 380px;
+        width: 95%;
+        margin-top: 20px;
+    }
+
+}
+
+
