@@ -83,6 +83,15 @@ if (isset($_POST['button'])) {
                 <?php echo $display[0]['article']; ?>
             </div>
         </div>
+        <div>
+
+            <?php
+
+            echo $display[0]['comment'];
+
+            ?>
+
+        </div>
         <label for="commentaire">Commentaire :</label>
         <textarea name="commentaire" id="commentaire"></textarea>
         <form method="post">
