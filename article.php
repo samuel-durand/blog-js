@@ -47,13 +47,14 @@ $display = $request->fetchAll(PDO::FETCH_ASSOC);
 
     <main>
         <div>
-            <p>titre</p>
-            <p>userame</p>
-            <p>role_id</p>
-            <p>date</p>
-            <p>categorie</p>
+            <p> <?php echo $display[0]['title']; ?> </p>
+            <p> <?php echo $display[0]['username']; ?> </p>
+            <p> <?php echo $display[0]['rights']; ?> </p>
+            <p> <?php echo $display[0]['article_date']; ?> </p>
+            <p> <?php echo $display[0]['name']; ?> </p>
             <div>
                 <h1>contenue article</h1>
+                <?php echo $display[0]['article']; ?>
             </div>
         </div>
         <label for="commentaire">Commentaire :</label>
