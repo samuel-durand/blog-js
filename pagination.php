@@ -109,12 +109,12 @@ $articles = $request->fetchAll(PDO::FETCH_ASSOC);
                 </table>
                 <nav>
                     <ul class="pagination">
-                        <!-- Lien vers la page précédente (désactivé si on se trouve sur la 1ère page) -->
+                        <!-- Link to previous page (disabled if on the 1st page) -->
                         <li class="page-item <?= ($currentPage == 1) ? "disabled" : "" ?>">
                             <a href="pagination.php/?page=<?= $currentPage - 1 ?>" class="page-link">Précédente</a>
                         </li>
                         <?php for ($page = 1; $page <= $pages; $page++) : ?>
-                            <!-- Lien vers chacune des pages (activé si on se trouve sur la page correspondante) -->
+                            <!-- Link to each page (activated if we are on the corresponding page) -->
                             <li class="page-item <?= ($currentPage == $page) ? "active" : "" ?>">
                                 <a href="pagination.php/?page=<?= $page ?>" class="page-link"><?= $page ?></a>
                             </li>
