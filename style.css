@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,400;1,700&family=Roboto:ital,wght@0,100;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Space+Mono&display=swap');
+
+* {
+    list-style-type: none;
+    list-style: none;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    
+    
+}
+
+body {
+    background-color:  #3B5249
+}
+
+a {
+    color: white;
+}
+
+a:visited{
+    color: red;
+}
+
+
+
+/*admin*/
+
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 15px;
+}
+
+section table {
+    border-collapse: collapse;
+    width: 100%;
+    color: black;
+}
+
+section table td , table th {
+    border: 1px solid #5EC262;
+    padding: 8px;
+}
+
+section table tr:nth-child(even){background-color: #f2f2f2;}
+
+section table tr:hover {background-color: #ddd;}
+
+
+section th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    background-color:#04AA6D ;
+    color: white;
+}
+
+section table tr td button {
+    background-color: #04AA6D;
+    border: 05px;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: 300;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+section table tr td button:hover{
+    background-color: #02d386;
+}
+
+
+section table tr td button a {
+    color: white;
+    text-decoration: none;}
+
+    section table tr td button a:visited{
+        color: red;
+    }
+
+
+
+/*register form */
+
+.form-main {
+
+    padding: 100px;
+}
+
+.form-main form {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+    height: 350px;
+    background-color: #5fa087;
+    backdrop-filter: blur( 0.5px );
+    -webkit-backdrop-filter: blur( 0.5px );
+    border: 5px solid rgba( 255, 255, 255, 0.18 );
+    border-radius: 10px;
+    margin: auto;
+    height: 500px;
+    width: 50%;
+}
+
+form input{
+    background: rgba(255, 255, 255, 0.2);
+	border: 3px solid rgba(255, 255, 255, 0.342);
+	border-radius: 5px;
+    padding: 9px 10px;
+    font-size: 15px;
+	margin: 5px;
+	width: 190px;
+}
+
+form button{
+    margin: 15px;
+}
+form a {
+    align-items: center;
+    text-align: center;
+    margin: 15px;
+}
+
+form input:focus{
+    outline: none;
+
+}
+
+form input[type=text]{
+    width: 300px;
+    transition: width .35s ease-in-out;
+}
+
+form input[type=text]:focus{
+    width: 320px;
+}
+
+
+
+form input[type=email]{
+    width: 300px;
+    transition: width .35s ease-in-out;
+}
+
+form input[type=email]:focus{
+    width: 320px;
+}
+
+form input[type=password]{
+    width: 300px;
+    transition: width .35s ease-in-out;
+}
+
+form input[type=password]:focus{
+    width: 320px;
+}
+
+
+
+
+form button {
+    background: rgba(255, 255, 255, 0.2);
+	border: 3px solid rgba(255, 255, 255, 0.342);
+	border-radius: 5px;
+    font-size: 18px;
+    font-weight: 300;
+    color: black;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+main form label {
+    font-size: 15px;
+    margin: 15px;
+}
+
+
+
+/*index*/
+
+#title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 10px;
+}
+
+#index {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#index section {
+    text-align: center;
+    width: 80%;
+    font-size: 20px;
+}
+
+/*reponsive */
+
+@media screen and (max-width: 768px) {
+    section p {
+        display: flex;
+        justify-content: space-evenly;
+        text-align: left;
+    }
+}
+
+/*comment section*/
+
+ .comments main {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    height: 100px;
+
+
+}
+
+.commemnts main section {
+
+}
+
+
+main section  form{
+    display: flex;
+    flex-direction: column;
+    background-color: #7BB292;
+
+}
