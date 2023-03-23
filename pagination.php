@@ -1,7 +1,7 @@
 <?php
 
-// On se connecte à là base de données
-//require_once('connect.php');
+// We connect to the database
+
 try {
     $database = new PDO('mysql:host=localhost;dbname=blog_js;charset=utf8;port=3307', 'root', '');
 } catch (Exception $e) {
@@ -10,64 +10,63 @@ try {
 
 $sql = 'SELECT * FROM `articles` ORDER BY `creation_date` DESC;';
 
-// On prépare la requête
+// We prepare the request
 $request = $database->prepare($sql);
 
-// On exécute
+// We run
 $request->execute();
 
-// On récupère les valeurs dans un tableau associatif
+// The values are retrieved in an associative array
 $articles = $request->fetchAll(PDO::FETCH_ASSOC);
 
 //var_dump($articles);
 
-// On détermine sur quelle page on se trouve
+// We determine which page we are on
 if (isset($_GET['page']) && !empty($_GET['page'])) {
     $currentPage = (int) strip_tags($_GET['page']);
 } else {
     $currentPage = 1;
 }
 
-// On détermine le nombre total d'articles
+// The total number of items is determined
 $sql = 'SELECT COUNT(*) AS nb_articles FROM `articles`;';
 
-// On prépare la requête
+// We prepare the request
 $request = $database->prepare($sql);
 
-// On exécute
+// We run
 $request->execute();
 
-// On récupère le nombre d'articles
+// We get the number of items
 $result = $request->fetch();
 
 $nbArticles = (int) $result['nb_articles'];
 
 //var_dump($nbArticles);
 
-// On détermine le nombre d'articles par page
+// We determine the number of articles per page
 $parPage = 5;
 
-// On calcule le nombre de pages total
+// We calculate the total number of pages
 $pages = ceil($nbArticles / $parPage);
 
-// Calcul du 1er article de la page
+// Calculation of the 1st item on the page
 $premier = ($currentPage * $parPage) - $parPage;
 
 $sql = 'SELECT * FROM `articles` ORDER BY `creation_date` DESC LIMIT :premier, :parpage;';
 
-// On prépare la requête
+// We prepare the request
 $request = $database->prepare($sql);
 
 $request->bindValue(':premier', $premier, PDO::PARAM_INT);
 $request->bindValue(':parpage', $parPage, PDO::PARAM_INT);
 
-// On exécute
+// We run
 $request->execute();
 
-// On récupère les valeurs dans un tableau associatif
+// The values are retrieved in an associative array
 $articles = $request->fetchAll(PDO::FETCH_ASSOC);
 //var_dump($articles);
-
 
 ?>
 
