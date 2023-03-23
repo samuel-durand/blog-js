@@ -119,7 +119,7 @@ $articles = $request->fetchAll(PDO::FETCH_ASSOC);
                                 <a href="pagination.php/?page=<?= $page ?>" class="page-link"><?= $page ?></a>
                             </li>
                         <?php endfor ?>
-                        <!-- Lien vers la page suivante (désactivé si on se trouve sur la dernière page) -->
+                        <!-- Link to the next page (disabled if on the last page) -->
                         <li class="page-item <?= ($currentPage == $pages) ? "disabled" : "" ?>">
                             <a href="pagination.php/?page=<?= $currentPage + 1 ?>" class="page-link">Suivante</a>
                         </li>
