@@ -10,7 +10,7 @@ if (!empty($_SESSION['username']) && $_SESSION['rights'] != "moderator"){ // si 
     header("Location: usersGestion.php");
     exit;
 }
-
+    
 //$user = new usersGestion;
     
     // var_dump($id_user);

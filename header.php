@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="header.css">
 </head>
 <body>
-    <header>
+    <header>    
         <nav>
             <div class="mobile-menu-icon">
                 <span></span>
@@ -16,13 +16,17 @@
                 <span></span>
             </div>
             <ul>
-                <li><a href="index.php">Accueil</a></li>
-                <li><a href="register.php">S'inscrire</a></li>
-                <li><a href="login.php">Connexion</a></li>
-                <li><a href="article.php">Article</a></li>
-                <?php if(isset($_SESSION['login']));?>
-                <li><a href="creation-article.php">Créer un article</a></li>
-                <li><a href="logout.php">Se déconnecter</a></li>
+                <?php if(isset($_SESSION['username'])) :?>
+                    <li><a href="index.php">Accueil</a></li>
+                    <li><a href="article.php">Article</a></li>
+                    <li><a href="logout.php">Se déconnecter</a></li>
+                    <li><a href="creation-article.php">Créer un article</a></li>
+                <?php else: ?>
+                    <li><a href="index.php">Accueil</a></li>
+                    <li><a href="article.php">Article</a></li>
+                    <li><a href="login.php">Connexion</a></li>
+                    <li><a href="register.php">S'inscrire</a></li>
+                <?php endif; ?>
             </ul>
         </nav>
     </header>

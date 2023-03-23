@@ -61,7 +61,8 @@ class usersGestion
     }
 
     public function connection($email, $password) {
-        session_start();
+        //session_start();
+
         $request = $this->database->prepare('SELECT u.`id` , `email` , `username` , `password` , `rights` FROM users u INNER JOIN roles ON roles.id = u.role_id');
         $request->execute(array());
         $userDatabase = $request->fetchAll(PDO::FETCH_ASSOC);
@@ -86,13 +87,14 @@ class usersGestion
                 $logged = false;
             }
             //var_dump($user);
-            }
+        }
 
         //echo $_SESSION["username"];
 
         if( $logged ) {
             echo "vous êtes connecté ".$_SESSION['username']." en tant que: ".$_SESSION['rights'];
             //var_dump($user);
+            header('Location: index.php');
         } else {
             echo "erreur dans l'email ou le password</br>";
         }
@@ -121,7 +123,7 @@ class usersGestion
 
 }
 
- $user = new usersGestion;
+//$user = new usersGestion;
 
 // $user->register("maloo@.com","maloo","boubou");
 // $user->register("elgato@churros.com","elgato","meowmeow");
