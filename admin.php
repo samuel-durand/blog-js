@@ -3,6 +3,15 @@
 session_start();
 require_once("usersGestion.php");
 
+    if (!empty($_SESSION['username']) && $_SESSION['rights'] != "administrator"){ // si l'utilisateur n'est pas modérator ou administrator, il est rediriger vers la page d'accueil.php
+        header("Location: usersGestion.php");
+        exit;
+    } else if (empty($_SESSION)) {
+        header("Location: usersGestion.php");
+        exit;
+    }
+
+
 $user = new usersGestion;
 
 //    var_dump($_POST);
