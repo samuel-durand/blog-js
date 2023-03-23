@@ -22,6 +22,12 @@
                     <li class="active"> Format texte </li>
                     <li> Insertion image </li>
                     <li> Format image </li>
+                    <label for="">change</label>
+                    <select name="" id="">
+                        <option value="">test</option>
+                        <option value="">test</option>
+                        <option value="">test</option>
+                    </select>
                 </ul>
             </div>
             <div id="tools">
