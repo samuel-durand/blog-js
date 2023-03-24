@@ -1,12 +1,19 @@
-*{
-    list-style: none;
-    list-style-type: none;
-    text-decoration: none;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,400;1,700&family=Roboto:ital,wght@0,100;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Space+Mono&display=swap');
+
+
+
+
+* {
+  list-style-type: none;
+  list-style: none;
+  text-decoration: none;
     margin: 0;
     padding: 0;
-}
-
-
+    box-sizing: border-box;
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+    font: 300;
+  }
 
 
 
@@ -18,7 +25,7 @@ footer {
     bottom: 0;
     left: 0;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     background-color: #98B4A4;
     height: 110px;
@@ -30,6 +37,8 @@ footer {
 
 footer ul li {
     display: inline;
+    justify-content: space-evenly;
+
     padding: 3px;
 
 }
@@ -43,7 +52,7 @@ footer ul li {
     bottom: 0;
     left: 0;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     background-color: #98B4A4;
     height: 110px;
@@ -61,7 +70,7 @@ footer ul li {
       bottom: 0;
       left: 0;
       display: flex;
-      justify-content: center;
+      justify-content: space-evenly;
       align-items: center;
       background-color: #98B4A4;
       height: 110px;

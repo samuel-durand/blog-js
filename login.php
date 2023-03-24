@@ -11,7 +11,7 @@
     <?php include('header.php') ?>
     <main class="form-main">
         <form method="post">
-
+ 
         <label for="email">Email :</label>
         <input type="email" name="email" id="email">
 

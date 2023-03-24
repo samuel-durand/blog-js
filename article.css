@@ -11,7 +11,6 @@
     font: 300;
 }
 
-
 body {
     background-color:   #3B5249;
 
@@ -791,7 +790,7 @@ textarea:focus {
     }
     
     .margin main textarea {
-        height: 490px;
+        height: 330px;
         width: 95%;
         margin-top: 20px;
     }
@@ -830,8 +829,4 @@ textarea:focus {
     }
 
 }
-
-
-
-
 
