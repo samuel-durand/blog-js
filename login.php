@@ -3,6 +3,9 @@ session_start();
 require_once("src/class/usersGestion.php");
 $user = new usersGestion;
 
+if (isset($_SESSION["username"])) {  
+    header("Location: index.php");
+}
 
 //var_dump($_SESSION);
 
@@ -14,9 +17,7 @@ $user = new usersGestion;
 
     }
 
-//   if (isset($_SESSION["username"])) {  
-//       header("Location: index.php");
-//   }
+
     
 
 ?>

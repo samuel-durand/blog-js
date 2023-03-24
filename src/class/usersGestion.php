@@ -29,8 +29,10 @@ class usersGestion
         $password;
         $username;
         $emailOk = false;
+        $usernameOK = false;
         $right = "";
-        $right_description = "";
+        $role_id = 3; // le role id 3 correspond a un utilisateur normale.
+        
 
         foreach ($userDatabase as $user) {
             
@@ -38,21 +40,23 @@ class usersGestion
                 echo "cette utilisateur existe déjà";
                 $emailOk = false;
                 break;
-            } else {
+            } else if ( $username == $user['username']){
+                echo "cette username existe déjà";
+                $usernameOk = false;
+                break;
+            } else {    
                 $emailOk = true;
-                $right = "subscribed";
+                $usernameOk = true;
+
             }           
             echo $user['email']."<br>";
         }
 
-        if ($right = "subscribed") {
-            $right_description = "cette utilisateur peux écrire des commentaire sur les articles";
-        }
 
-        if ($emailOk == true){
+        if ($emailOk == true && $usernameOk = true){
         //on créer l'utilisateur.
-          $request = $this->database->prepare("INSERT INTO users(email, username, password, register_date) VALUES (?, ?, ?,NOW())");
-          $request->execute(array($this->email,$username, $password));
+          $request = $this->database->prepare("INSERT INTO users(email, username, password, role_id, register_date) VALUES (?, ?, ?, ?,NOW())");
+          $request->execute(array($this->email, $username, $password, $role_id));
     
           echo "tu est inscrit";
         }        
