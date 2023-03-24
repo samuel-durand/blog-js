@@ -1,5 +1,31 @@
+<?php
+session_start();
+
+if (isset($_SESSION["username"])) {  
+    header("Location: index.php");
+}
+
+require_once("src/class/usersGestion.php");
+$user = new usersGestion;
+
+if (isset($_POST['submit'])) {
+
+    if ($_POST['email'] && $_POST['username'] && $_POST['password']) {
+        
+    $email = $_POST['email'];
+    $username = $_POST['username'];
+    $password = $_POST['password'];
+    $user->register($email, $username, $password);
+
+    } else {
+        echo "veuillez remplir tout les champs"; 
+    } 
+} 
+
+
+?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,13 +37,13 @@
 
     <?php include('header.php') ?>
     <main class="form-main">
-        <form  class="formulaire-register">
+        <form  method="post" class="formulaire-register">
 
             <label for="email">Email :</label>
             <input type="email" name="email" id="email">
 
-            <label for="login">login :</label>
-            <input type="text" name="login" id="login">
+            <label for="username">username :</label>
+            <input type="text" name="username" id="username">
 
             <label for="password">password :</label>
             <input type="password" name="password" id="password">
