@@ -17,7 +17,8 @@ session_start();
 
     <main>
         <div class="selection">
-            <p>titre</p>
+            <label for="titre">titre</label>
+            <input type="text">
             <p>categories</p>
             <select name="" id="">
                 <option value="">test</option>
@@ -28,15 +29,9 @@ session_start();
             <p>userame</p>
             <p>role_id</p>
             <p>date</p>
-            <div>
-                <h1>contenue article</h1>
-            </div>
+
         </div>
-        <label for="commentaire">Commentaire :</label>
-        <textarea name="commentaire" id="commentaire"></textarea>
-        <form method="post">
-        <button type="submit" name="submit">Commenter</button> 
-        </form>       
+    
     </main>
 
     <?php include('footer.php') ?>
