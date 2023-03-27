@@ -4,7 +4,7 @@ body {
 
 
 main {
-    height: 800px;
+    height: 790px;
     background-color:   #3B5249;
 
     display: flex;
@@ -26,12 +26,23 @@ main .selection {
 
 main .selection input {
     padding: 5px 10px;
+    border-radius: 5px;
+
+}
+ main .selection input[type=text]:focus {
+    border: 3px solid #555;
+  }
+
+
+main .selection select {
+    padding: 4px 10px;
     border: 5px;
     border-radius: 5px;
 
 }
 
-main .selection select {
+
+main .selection select option {
     padding: 4px 10px;
     border: 5px;
     border-radius: 5px;
