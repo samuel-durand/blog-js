@@ -16,12 +16,18 @@ session_start();
 
 
     <main>
-        <div>
+        <div class="selection">
             <p>titre</p>
+            <p>categories</p>
+            <select name="" id="">
+                <option value="">test</option>
+                <option value="">test</option>
+                <option value="">test</option>
+
+            </select>
             <p>userame</p>
             <p>role_id</p>
             <p>date</p>
-            <p>categorie</p>
             <div>
                 <h1>contenue article</h1>
             </div>
