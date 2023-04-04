@@ -1,7 +1,78 @@
+body {
+    color: white;
+}
+
 
 main {
+<<<<<<< HEAD
+=======
+    height: 790px;
+    background-color:   #3B5249;
+
+>>>>>>> 397bead674c92763b6da02662902412e00e8d390
     display: flex;
     flex-direction: column;
     align-items: center;
+<<<<<<< HEAD
     margin-top: 50px;
 }
+=======
+    margin: auto;
+    
+    
+}
+
+main .selection {
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+
+
+}
+
+main .selection input {
+    padding: 5px 10px;
+    border-radius: 5px;
+
+}
+ main .selection input[type=text]:focus {
+    border: 3px solid #555;
+  }
+
+
+main .selection select {
+    padding: 4px 10px;
+    border: 5px;
+    border-radius: 5px;
+
+}
+
+
+main .selection select option {
+    padding: 4px 10px;
+    border: 5px;
+    border-radius: 5px;
+
+}
+
+
+main .selection label form button {
+    background-color: blueviolet;
+}
+
+
+
+textarea {
+    width: 95%;
+    height: 400px;
+    border: 5px;
+    border-radius: 5px;
+    overscroll-behavior-x: contain;
+
+}
+
+textarea:focus {
+    outline: none;
+}
+
+>>>>>>> 397bead674c92763b6da02662902412e00e8d390

@@ -11,12 +11,9 @@
 
 
 footer {
-    position: absolute;
-    width: 100%;
-    height: 15%;
-    right: 0;
-    bottom: 0;
-    left: 0;
+  position:absolute;
+  bottom:0;
+  width:100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -34,38 +31,4 @@ footer ul li {
 
 }
 
-@media only screen and (max-width: 1000px) and (min-width: 1px) {
-  footer {
-    position:   absolute;
-    width: 100%;
-    height: 15%;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #98B4A4;
-    height: 110px;
-    width: 100%;
-  }
-}
-
-
-
-
-  @media only screen and (max-width: 2000px) and (min-width: 1000px) {
-    footer {
-      position: absolute;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background-color: #98B4A4;
-      height: 110px;
-      width: 100%;
-    }
-  }
 

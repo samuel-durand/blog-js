@@ -9,10 +9,17 @@
 <body>
     <footer>
         <ul>
-            <li><a href="#">Accueil</a></li>
-            <li><a href="#">S'inscrire</a></li>
-            <li><a href="#">Connexion</a></li>
-            <li><a href="#">Article</a></li>
+            <?php if(isset($_SESSION['username'])) :?>
+                    <li><a href="index.php">Accueil</a></li>
+                    <li><a href="article.php">Article</a></li>
+                    <li><a href="logout.php">Se déconnecter</a></li>
+                    <li><a href="creation-article.php">Créer un article</a></li>
+            <?php else: ?>
+                    <li><a href="index.php">Accueil</a></li>
+                    <li><a href="article.php">Article</a></li>
+                    <li><a href="login.php">Connexion</a></li>
+                    <li><a href="register.php">S'inscrire</a></li>
+            <?php endif; ?>
         </ul>
     </footer>
     

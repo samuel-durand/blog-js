@@ -1,3 +1,26 @@
+<?php
+session_start();
+require_once("src/class/usersGestion.php");
+$user = new usersGestion;
+
+if (isset($_SESSION["username"])) {  
+    header("Location: index.php");
+}
+
+//var_dump($_SESSION);
+
+    if (isset($_POST['submit'])) {
+
+        $email = $_POST['email'];
+        $password = $_POST['password'];
+        $user->connection($email, $password);
+
+    }
+
+
+    
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,7 +41,7 @@
         <label for="password">password :</label>
         <input type="password" name="password" id="password">
 
-        <button>Se Connecter</button>
+        <button type="submit" name="submit" >Se Connecter</button>
 
         <a href="register.php">Pas encore inscrit ?</a>
 
